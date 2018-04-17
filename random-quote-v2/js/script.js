@@ -46,7 +46,8 @@ function printQuote()
   finalProduct += '<p class="quote">' + chosenQuote.quote + '</p>';
   finalProduct +=  '<p class="source">' + chosenQuote.source + '</p>';
   //Print it into the HTML
-  var produceQuote = document.getElementById('quote-box').innerHTML = produceQuote;
+  //*Error* Var Deleted
+  document.getElementById('quote-box').innerHTML = finalProduct
 }
 
 // event listener to respond to "Show another quote" button clicks
