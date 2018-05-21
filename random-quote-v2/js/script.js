@@ -2,31 +2,45 @@
 let quotes = [
   {
     quote: "You cannot shake hands with a clenched fist.",
-    source: "Indira Ghandi"
+    source: "Indira Ghandi",
+    citation: "",
+    year: null
   },
   {
     quote: "There is nothing permanent except change.",
-    source: "Heraclitus"
+    source: "Heraclitus",
+    citation: "",
+    year: null
   },
   {
     quote: "There is no charm equal to tenderness of heart.",
-    source: "Jane Austen"
+    source: "Jane Austen",
+    citation: "",
+    year: null
   },
   {
     quote: "The only journey is the one within.",
-    source: "Rainer Maria"
+    source: "Rainer Maria",
+    citation: "",
+    year: null
   },
   {
     quote: "It is far better to be alone, than to be in bad company.",
-    source: "George Washington"
+    source: "George Washington",
+    citation: "",
+    year: null
   },
   {
     quote: "Independence is happiness.",
-    source: "Susan B. Anthony"
+    source: "Susan B. Anthony",
+    citation: "",
+    year: null
   },
   {
     quote: "You can do anything but not everything",
-    source: "David Allen"
+    source: "David Allen",
+    citation: "",
+    year: null
   }
 ];
 //Creates a Random Quote(Math.Random)
@@ -41,6 +55,11 @@ function printQuote()
 {
   //Pass quote and print it
   var chosenQuote = getRandomQuote();
+  if(chosenQuote.citation ==! "" && chosenQuote.year ==!  null)
+  {
+      console.log("PLEASE DONT ADD YEAR OR AUTHOR!");
+      getRandomQuote();
+  }else{
   //Chose the quote and set up the Values
   var finalProduct ='';
   finalProduct += '<p class="quote">' + chosenQuote.quote + '</p>';
@@ -48,6 +67,7 @@ function printQuote()
   //Print it into the HTML
   //*Error* Var Deleted
   document.getElementById('quote-box').innerHTML = finalProduct
+  }
 }
 
 // event listener to respond to "Show another quote" button clicks
